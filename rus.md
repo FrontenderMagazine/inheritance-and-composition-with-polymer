@@ -11,7 +11,7 @@
     <polymer-element name="my-custom-element" noscript>
       <template>
         <!-- shadow dom -->
-        <div>My custom element</div>
+        <div>Мой элемент</div>
       </template>
     </polymer-element>
 
@@ -95,10 +95,10 @@
 
 Теперь мы знаем, как расширять элементы с помощью Polymer, при этом вы могли бы задаться вопросом, как можно расширить несколько элементов. Например, у нас есть компонент, расширяющий элементы таким образом, чтобы их можно было таскать мышкой. Мы могли бы использовать его, применяя к существующим элементам, таким как этот:
 
-    <!-- draggable img -->
+    <!-- перетаскиваемый img -->
     <img is="my-draggable">
 
-    <!-- draggable something -->
+    <!-- перетаскиваемое что-то другое -->
     <div is="my-draggable"></div>
 
 Так как-же расширить несколько элементов? Вы наверняка ждете решения в духе `extends="foo bar"`, верно? К сожалению, решения нет. Чтобы сделать его более понятным:
@@ -141,7 +141,7 @@
 
     <script>
       window.sharedMixin = {
-        // logic goes here
+        // логика компонента
       };
     </script>
 
@@ -152,7 +152,7 @@
     <element name="foo-element">
       <script>
         Polymer('foo-element', Platform.mixin({
-          // foo-element logic
+          // логика компонента
         }, sharedMixin));
       </script>
     </element>
